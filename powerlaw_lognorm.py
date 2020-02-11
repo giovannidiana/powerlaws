@@ -59,7 +59,7 @@ def IS_LN(npart):
     mean_mu = mu_sample[wmax_ID]
     mean_sig = sig_sample[wmax_ID]
 
-    return([mean_mu,mean_sig, maxw + np.log(np.sum(np.exp(weights-maxw))),ESS])
+    return([mean_mu,mean_sig, maxw + np.log(np.sum(np.exp(weights-maxw)))-np.log(npart),ESS])
 
 
 def plot_samples(npart):
